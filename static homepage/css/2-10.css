@@ -1,0 +1,322 @@
+*{
+    margin: 0;padding: 0;
+    font-family: "Microsoft YaHei UI";
+}
+body{
+    min-width: 960px;
+    width: 100%;
+}
+/*顶部*/
+.header{
+    width: 100%;
+    height: 60px;
+    background: #07cbc9;
+    line-height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.header a{
+    text-decoration: none;
+    color: #fff;
+}
+.header img{
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 100px;
+}
+.header ul{
+    display: inline-block;
+    float: right;
+    margin-right: 70px;
+}
+.header ul li{
+    list-style: none;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.header li:hover{
+    background: #000;
+}
+
+/*banner图*/
+.Mbanner img{
+    margin-top: 60px;
+    width: 100%;
+    height: 400px;
+}
+/*banner图遮罩*/
+.MBtoplayer{
+    width: 100%;
+    min-width: 1000px;
+    height: 400px;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+}
+/*banner图表单*/
+.MBtopform{
+    width: 100%;
+    min-width: 1000px;
+    height: 400px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    top:60px;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+}
+.MBtopform input,
+.MBtopform textarea{
+    width: 350px;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #757575;
+    background: none;
+    padding-left: 5px;
+    color: #fff;
+}
+.MBtopform textarea{
+    height: 60px;
+}
+.MBtopform input.MBsub{
+    width:120px;
+    font-size: 12px;
+    color: #757575;
+}
+.MBtopform input:hover,
+.MBtopform textarea:hover{
+    border:1px solid #07cbc9;
+    color: #fff;
+}
+.MBsub:hover{
+    background: #07cbc9;
+    cursor: pointer;
+    border: none;
+}
+
+/*ABOUT区*/
+.Mabout{
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align:center;
+}
+.MAtop,
+.MAmiddle{
+    width: 700px;
+    margin: 0 auto;
+}
+/*ABOUT区上部*/
+.MATtitle{
+    font-size: 36px;
+    font-weight: bold;
+
+}
+.MATwords{
+    padding-top: 10px;
+    font-size: 10px;
+    line-height: 1.5em;
+    color: #757575;
+}
+/*ABOUT区中部*/
+.MAmiddle{
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    zoom:1;
+    margin-bottom: 50px;
+}
+.MAMleft,
+.MAMmiddle,
+.MAMright{
+    float: left;
+}
+.MAMleft{
+    width: 150px;
+    font-size: 24px;
+}
+.MAMmiddle{
+    width: 350px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.MAMmiddle img{
+    width: 350px;
+}
+.MAMright{
+    width: 160px;
+}
+.MAMright .number{
+    width: 158px;
+    height: 80px;
+    border: 1px solid #07cbc9;
+    padding-top: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.bluehr{
+    border: none;
+    width: 30px;
+    height: 2px;
+    background: #07cbc9;
+    margin: 10px auto;
+}
+.MAMtop{
+    width: 240px;
+    border: 1px solid #757575;
+    text-align: left;
+    font-size: 11px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    line-height: 1.5em;
+}
+.MAMtop button{
+    background: #000;
+    color: #eee;
+    font-size: 12px;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #000;
+}
+.MAMtop button:hover{
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+}
+/*ABOUT区底部*/
+/*考虑到宽度自适应而高度固定在不同显示器和缩放过程中产生图片变形的情况，决定设置高度随宽度同比例变动*/
+.MAbottom{
+    width: 100%;
+    background: #07cbc9;
+    overflow: hidden;
+    zoom:1;
+}
+.MAbottom ul li{
+    width: 25%;
+    padding-bottom: 25%;
+    list-style: none;
+    float: left;
+    position: relative;
+}
+.MAbottom li img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.MAbottom li .triangle1{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid #07cbc9;
+    position: absolute;
+    top:50%;
+    right: 0;
+    margin-top: -10px;
+}
+.MAbottom li .triangle2{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #07cbc9;
+    position: absolute;
+    top:50%;
+    left: 0;
+    margin-top: -10px;
+}
+.MABLwords{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.MABLwords h5,
+.MABLwords p{
+    text-align: left;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.MABLwords h5{
+    padding-top: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.MABLwords p:first-of-type{
+    font-size: 12px;
+    padding-top: 8px;
+    color: rgba(255,255,255,0.8);
+}
+.MABLwords p:last-of-type{
+    font-size: 9px;
+    padding-top: 8px;
+    color: rgba(255,255,255,0.6);
+    padding-bottom: 40px;
+}
+.MABLwords button{
+    background: #000;
+    color: #eee;
+    font-size: 10px;
+    padding: 8px;
+    border: 1px solid #000;
+}
+.MABLwords button:hover{
+    background: transparent;
+    cursor: pointer;
+}
+
+/*GALLERY区*/
+.Gbottom{
+    width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    zoom:1;
+}
+.Gbottom ul{
+    margin-right: -20px;
+}
+.Gbottom ul li{
+    list-style: none;
+    width: 220px;
+    background: #000;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.Gbottom li img{
+    width: 100%;
+}
+.Gbottom li p{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/*页脚区*/
+.footer{
+    width: 100%;
+    height: 60px;
+    background: #07cbc9;
+    text-align: center;
+    color:#fff;
+    font-size: 10px;
+    line-height: 60px;
+    clear: both;
+}
