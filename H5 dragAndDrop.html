@@ -1,0 +1,57 @@
+<!--
+注意：编写本代码时出现问题
+DOM事件
+    1、HTML事件
+        ondragstart="drag(event);"    注意不能使用window.onload事件
+    2、DOM0级事件
+        e.ondragstart=function(ev){};   使用匿名函数
+        e.ondragstart=funcName;    使用自定义函数
+            function funcName(ev){};
+        var funcName=function(ev){};    使用函数表达式，应注意顺序
+            e.ondragstart=funcName;
+event对象
+    event 对象随事件处理函数传入，本代码中以ev接收；
+    -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+    #box{
+    width:300px;
+    height:180px;
+    border:1px solid #000;
+    }
+    #img1{
+    width:200px;
+    height:120px;
+    margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div id="box"></div>
+<img src="img/Tulips.jpg" id="img1" draggable="true">
+<script>
+    window.onload=function(){
+        var box=document.getElementById('box'),
+        img1=document.getElementById('img1');
+        var allowdrop=function(ev){
+            ev.preventDefault();
+        }
+        var drag=function(ev){
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        var drop=function(ev){
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+        img1.ondragstart=drag;
+        box.ondragover=allowdrop;
+        box.ondrop=drop;
+    }
+</script>
+</body>
+</html>

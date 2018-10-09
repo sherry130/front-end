@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单美化3</title>
+    <style>
+    *{
+        font-family: "微软雅黑";
+    }
+        form{
+            margin: 40px;
+
+        }
+        label{
+            display: inline-block;
+            width: 90px;
+            height: 40px;
+            text-align: left;
+        }
+        input,select{
+            width: 200px;
+            height: 30px;
+            margin: 10px 0;
+            border: 1px solid #999;
+            border-radius: 5px;
+            outline: 0;
+        }
+        input:required{
+            background: url(img/star.jpg) no-repeat 95% center;
+
+        }
+        input:required:valid{
+            background: url(img/right.png) no-repeat 95% center;
+            border: 1px solid #0a0;
+            box-shadow: 0 0 3px #0a0;
+        }
+        input:focus:invalid{
+            background: url(img/error.png) no-repeat 95% center;
+            border: 1px solid #a00;
+            box-shadow: 0 0 3px #a00;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="post" autocomplete="off">
+        <label>手机号</label>
+        <input type="tel" name="tel" required pattern="^\d{11}$" id="tel"><br>
+        <label>密码</label>
+        <input type="password" name="password" required minlength="6" maxlength="20" id="psw"><br>
+        <label>确认密码</label>
+        <input type="password" name="repassword" required minlength="6" maxlength="20" id="rpsw"><br>
+        <label>了解方式</label>
+        <select>
+            <option value="">==请选择==</option>
+            <option value="1">搜索引擎</option>
+            <option value="2">朋友圈</option>
+            <option value="3">朋友推广</option>
+            <option value="4">广告投放</option>
+        </select><br>
+        <input type="submit" name="submit" value="提交">
+    </form>
+     <script>
+         var tel=document.getElementById('tel'),
+             psw=document.getElementById('psw'),
+             rpsw=document.getElementById('rpsw');
+
+        tel.addEventListener("input",function(){
+
+        })
+        tel.addEventListener("invalid",function(){
+            this.setCustomValidity('格式不正确');
+        })
+     </script>
+</body>
+</html>

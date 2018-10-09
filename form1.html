@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单美化</title>
+    <style>
+        .container{
+            width: 400px;
+            margin: 20px auto;
+        }
+        input,select,textarea{
+            width: 260px;
+            padding:10px 0;
+            border: 1px solid #999;
+            margin: 10px 0;
+            outline: none;
+        }
+        label{
+            font-family: "微软雅黑";
+            font-size: 16px;
+            margin-left: 20px;
+            color: #999;
+        }
+        input:required,textarea:required{
+            border-right: 3px solid #cc0088;
+        }
+        input:optional,select:optional{
+            border-right: 3px solid #999;
+        }
+        input:required:focus,textarea:required:focus{
+            box-shadow: 0 0 3px 1px #aa0088;
+        }
+        input:optional:focus,select:optional:focus{
+            box-shadow: 0 0 3px 1px #999;
+        }
+        input:required+label::after{
+            content: "(必填)";
+        }
+        input:optional+label::after,select+label::after{
+            content: "(选填)";
+        }
+        input[type="submit"]{
+            border-right: 1px solid #999;
+            background-color: #aa0088;
+            color: #fff;
+        }
+        input[type="submit"]:hover{
+            background-color: #880066;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <input type="text" name="username" required placeholder="请输入用户名"><label>用户名</label>
+            <input type="password" name="password" required placeholder="请输入密码"><label>密码</label>
+            <input type="tel" name="tel" placeholder="请输入联系电话"><label>电话</label>
+            <input type="email" name="email" placeholder="请输入邮箱"><label>邮箱</label>
+            <select name="edu">
+                <option>博士</option>
+                <option>研究生</option>
+                <option selected>本科</option>
+                <option>大专</option>
+                <option>高中</option>
+            </select><label>文化水平</label>
+            <textarea cols="30" rows="8" placeholder="说点什么吧" required></textarea>
+            <input type="submit" name="submit" value="提交">
+        </form>
+
+    </div>
+</body>
+</html>
